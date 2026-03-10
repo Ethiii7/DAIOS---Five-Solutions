@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="es-mx"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="shortcut icon" href="src/DAIOS.png" type="image/x-icon">
+<title>DAIOS - Five Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3f8ccb",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header/Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<a href="index.html"><img src="src/DAIOS.png" alt="" height="auto" width="35%"></a>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#sustentabilidad">Sustentabilidad</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#legal">Litigación</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</nav>
+<!-- Botón menú móvil -->
+                <button id="menu-btn"
+                class="text-primary md:hidden flex items-center justify-center rounded-lg p-2 hover:bg-gray-200 dark:hover:bg-[#1f2937] transition">
+                <span class="material-symbols-outlined text-[28px]">
+                    menu
+                </span>
+                </button>
+</div>
+</header>
+<!-- Menú móvil -->
+        <div id="mobile-menu"
+        class="fixed top-20 w-40 rounded-lg right-0 bg-background-light dark:bg-background-dark
+                border-b border-[#e5e7eb] dark:border-[#282e39]
+                hidden flex flex-col gap-4 px-6 py-6 md:hidden z-40">
+
+        <a href="#Exhibitions" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Exhibiciones
+        </a>
+        <a href="#Historia" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Historia
+        </a>
+        <a href="tourv.html" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Tour Virtual
+        </a>
+        <a href="#Contacto" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Contacto
+        </a>
+        </div>
+        <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+        </script>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative px-6 md:px-20 py-12 md:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="flex flex-col gap-6 lg:w-1/2 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                                Innovación y Experiencia
+                            </div>
+<h1 class="text-slate-900 dark:text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                                Soluciones Integrales para <span class="text-primary">Cada Desafío</span> Corporativo
+                            </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal max-w-xl">
+                                Expertos en Ingeniería Civil, Arquitectura y Sostenibilidad Ambiental. Transformamos proyectos complejos en realidades tangibles para el sector público y privado.
+                            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-background-dark text-base font-bold shadow-lg shadow-primary/20 transition-all hover:bg-primary/90">
+                                    Ver Proyectos
+                                </button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-transparent border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                    Nuestra Historia
+                                </button>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -right-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Arquitectura moderna" class="w-full aspect-[4/3] object-cover" data-alt="Modern architecture glass building with blueprints overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYlIaTAGP5Esb4_8yndErG6pQ1m3FuomMqUufgXkIiUvDVldq0BLnFtKZbjnmDD2nF_rLsAAZtSB0FMyc1sI0u2DOzqXjkpR-7hIHboqilqU9EN8vrDuvHhe5BG-XGec0gMB7Io4HgVu-d0L9WybYn6yRXT2ThpJAO7-dJ9Xt8isAVx0ZJfVVaaSQkAmCMjp1LucAUQzOy-vKv7lWXyzHzgI8r2jTM7Tj79MIqz4XjM-5ic6GwzeMYIg1YCQk2NXwV99GsJMnvSCLS"/>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 dark:bg-background-dark/90 backdrop-blur rounded-xl border border-white/20">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary rounded-lg text-background-dark">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Eficiencia Garantizada</p>
+<p class="text-xs text-slate-500">Optimización de recursos en el 100% de proyectos</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-white dark:bg-background-dark/50 py-20 px-6 md:px-20" id="servicios">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm">Nuestra Experiencia</h2>
+<h3 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white">Pilares de Excelencia</h3>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                                Ofrecemos una gama completa de servicios profesionales adaptados a sus necesidades corporativas, garantizando cumplimiento y calidad técnica.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="group p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-background-dark">engineering</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white">Ingeniería y Arquitectura</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Diseño estructural, gestión de obra y proyectos arquitectónicos de vanguardia con estándares internacionales.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 2 -->
+<div class="group p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-background-dark">eco</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white">Sostenibilidad Ambiental</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Estudios de impacto, auditorías ambientales y consultoría en certificaciones sustentables para su empresa.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 3 -->
+<div class="group p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-background-dark">assignment</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white">Licitaciones Públicas</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Especialistas en procesos concursales, preparación de propuestas técnicas y económicas ganadoras.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 4 -->
+<div class="group p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-background-dark">business_center</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white">Servicios Integrales</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Mantenimiento industrial y soporte corporativo 360° para garantizar la operatividad de sus instalaciones.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 5 -->
+<div class="group p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-background-dark">description</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white">Gestión y Trámites</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Agilización de permisos gubernamentales, licencias de funcionamiento y cumplimiento normativo estricto.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 6 -->
+<div class="group p-8 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-background-dark">gavel</span>
+</div>
+<h4 class="text-xl font-bold mb-3 dark:text-white">Litigación y Legal</h4>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Defensa legal especializada en derecho civil, mercantil y administrativo con enfoque en el sector construcción.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 hover:gap-3 transition-all" href="#">Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability & Innovation -->
+<section class="py-20 bg-background-dark text-white overflow-hidden relative" id="sustentabilidad">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-20 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8 z-10">
+<h2 class="text-3xl md:text-5xl font-black leading-tight">Sustentabilidad <br/><span class="text-primary">e Innovación</span></h2>
+<p class="text-slate-300 text-lg leading-relaxed">
+                                Comprometidos con el futuro del planeta a través de iniciativas verdes y tecnología de punta. Aplicamos metodologías BIM para la reducción de desperdicios en cada etapa.
+                            </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">energy_savings_leaf</span>
+</div>
+<div>
+<h5 class="font-bold text-xl mb-1">Iniciativas Verdes</h5>
+<p class="text-slate-400">Reducción activa de la huella de carbono y uso de materiales ecosostenibles.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-primary">model_training</span>
+</div>
+<div>
+<h5 class="font-bold text-xl mb-1">Tecnología Aplicada</h5>
+<p class="text-slate-400">Modelado digital inteligente para la optimización máxima de recursos técnicos.</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-background-dark px-10 py-4 rounded-lg font-bold hover:brightness-110 transition-all">Explorar Proyectos Verdes</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<img alt="Oficina sustentable" class="rounded-xl aspect-square object-cover" data-alt="Modern sustainable office building with indoor greenery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHEygvelTcInvw4XpqszOa1u5LlhzZBnMSjnS1DjMMC2oemNhXQm-r3SWEW6KlCXHnALCZfBE-Gc-_QWQvG-qwq1tU_GeOPTfM1G8A1KA7MyYQ3pN_K-Pk-U51z7Qq_ET7ayLd0Z-jdFyfIwaUghd_cW96ck2pajCFhILNz3ij_wwAy909Qkswk11NhE3r4KD1-do1T3Nw39CRouNJCB3f-X-lvScI_YQFlgu_D3FCp1ra7sbXhTfQJPBBHoEFDllLsS3uMK_gBkef"/>
+<img alt="Energía renovable" class="rounded-xl aspect-[4/5] object-cover translate-y-8" data-alt="Solar panels on top of an industrial complex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXofK4LvZ8lc94_UCy5uOweQzV9nwGmJ450tLFVElq6b5Tcy78Hob3B5i57TFqRxbXW4Vtqntt2URdIVRVTiTh3YjMzrVvcPiqDVQeHHM3X-ExEX-kAj9dNplDZDExWhTmsxjkLF74_Yx2RRoYZ08WvixUEQaKBdPTHEir0lWVfPV5KlS8AMN3q-fq34aZxKrxSuxn8HPmY4fhAeHiozHeGNhUzLc5Xp-X8jDRFWAMu95FTQbQJAKeP8tN0ZJ7_jDYMgGDLDp2Yyka"/>
+</div>
+</div>
+</section>
+<!-- Trust/Litigation Section -->
+<section class="py-20 px-6 md:px-20 bg-background-light dark:bg-slate-900/20" id="legal">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2">
+<div class="p-10 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl relative">
+<div class="absolute -top-6 -right-6 p-4 bg-primary text-background-dark rounded-full font-bold shadow-lg">
+                                    +15 años
+                                </div>
+<h3 class="text-2xl font-black mb-6 dark:text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+                                    Defensa Legal Experta
+                                </h3>
+<p class="text-slate-600 dark:text-slate-400 mb-6 italic">
+                                    "Nuestra firma no solo construye estructuras, construye certezas legales. Ofrecemos una representación integral que protege los activos y el prestigio de nuestros clientes corporativos."
+                                </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img alt="Director Legal" data-alt="Portrait of a professional corporate lawyer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd38HXAvqmVYXNIzpapBy81ZGvmnVeEqGnERUJqy4yplwluAU2pVuhvzjDNZQvUpjHy7lj3DF7o1RpAdmIyuvY_O9h9HUTp-sBZbJYSILrNlN1Rccl-PrlqA49LZ8z4WBm1aa1tURfPDsxwqCoytFss4q7iAK9uIDuJJRNs_GbO0IyXFbC8hpZ6wcYz97iMqkXG1Iv1yIqsY6zQ2mgv_1myxXThFLjLIjUb-_VWsJR9fygCeZmhoFBTVT2fsLo5eDpnWCXD0IkzAlh"/>
+</div>
+<div>
+<p class="font-bold dark:text-white text-sm">Director de Litigación</p>
+<p class="text-slate-500 text-xs">Especialista en Derecho Administrativo</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 space-y-6">
+<h2 class="text-3xl md:text-4xl font-black dark:text-white">Confianza y Certeza Jurídica</h2>
+<p class="text-slate-600 dark:text-slate-400">Entendemos que el éxito de un proyecto depende de su solidez legal tanto como de su integridad estructural. Nuestra área de litigación previene y resuelve controversias con un enfoque pragmático y profesional.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Resolución alternativa de conflictos.
+                                </li>
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Defensa en licitaciones y contratos.
+                                </li>
+<li class="flex items-center gap-3 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Asesoría preventiva corporativa.
+                                </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6 md:px-20" id="contacto">
+<div class="max-w-5xl mx-auto rounded-3xl overflow-hidden relative bg-primary p-12 text-center shadow-2xl shadow-primary/30">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="relative z-10 space-y-8">
+<h2 class="text-background-dark text-4xl md:text-5xl font-black">¿Listo para iniciar su próximo proyecto?</h2>
+<p class="text-background-dark/80 text-xl font-medium max-w-2xl mx-auto">
+                                Nuestro equipo de expertos está listo para brindarle la asesoría técnica y legal que su empresa requiere.
+                            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-background-dark text-white px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-all">Solicitar Cotización</button>
+<button class="bg-white text-background-dark px-10 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-all border border-background-dark/10">Agendar Consultoría</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-16 px-6 md:px-20 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined text-primary text-4xl">architecture</span>
+<h2 class="text-xl font-black">SIC</h2>
+</div>
+<p class="text-sm leading-relaxed">
+                            Líderes en soluciones integrales para el desarrollo de infraestructura y gestión legal corporativa en todo el territorio nacional.
+                        </p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Servicios</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Ingeniería Civil</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Arquitectura</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Medio Ambiente</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Licitaciones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Compañía</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nuestros Proyectos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustentabilidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog de Noticias</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Ubicación</h4>
+<div class="space-y-4 text-sm">
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                                Ciudad de México, Edificio Corporativo, Piso 12
+                            </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+                                contacto@sic-servicios.com
+                            </p>
+<div class="pt-4 flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2024 Servicios Integrales Corporativos. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Aviso de Privacidad</a>
+<a class="hover:text-white transition-colors" href="#">Términos y Condiciones</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
