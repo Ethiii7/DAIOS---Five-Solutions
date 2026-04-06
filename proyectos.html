@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="shortcut icon" href="src/DAIOS.png" type="image/x-icon">
+<title>DAIOS | Five Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3f8ccb",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header/Navigation -->
+<header class=" fixed top-0 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-background-dark w-full z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<a href="index.html"><img src="src/DAIOS.png" alt=""  class="w-40 lg:w-64"></a>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Servicios</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</nav>
+<!-- Botón menú móvil -->
+                <button id="menu-btn"
+                class="text-primary md:hidden flex items-center justify-center rounded-lg p-2 hover:bg-gray-200 dark:hover:bg-[#1f2937] transition">
+                <span class="material-symbols-outlined text-[28px]">
+                    menu
+                </span>
+                </button>
+</div>
+</header>
+<!-- Menú móvil -->
+        <div id="mobile-menu"
+        class="fixed top-20 w-40 rounded-lg right-0 bg-background-light dark:bg-background-dark
+                border-b border-[#e5e7eb] dark:border-[#282e39]
+                hidden flex flex-col gap-4 px-6 py-6 md:hidden z-40">
+
+        <a href="index.html" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Inicio
+        </a>
+        <a href="#" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Servicios
+        </a>
+        <a href="#" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Nosotros
+        </a>
+        <a href="#Contacto" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+            Contacto
+        </a>
+        </div>
+        <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+        </script>
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 md:px-10 py-12">
+<!-- Hero Section for Projects -->
+<section class="flex flex-col py-20 md:py-30 md:flex-row justify-between items-end gap-6 mb-12">
+<div class="max-w-2xl">
+<nav class="flex items-center gap-2 text-primary text-sm font-bold mb-4 uppercase tracking-widest">
+<span>Proyectos Ejecutados</span>
+<span class="material-symbols-outlined text-xs">arrow_forward_ios</span>
+<span class="text-slate-500 dark:text-slate-400">Contratos</span>
+</nav>
+<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-4">
+                        Nuestros <span class="text-primary">Proyectos</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                        Explora nuestra trayectoria en ingeniería civil, arquitectura de vanguardia y soluciones sustentables de alto impacto ambiental.
+                    </p>
+</div>
+</section>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-background-dark/0 transition-colors z-10"></div>
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-background-dark text-[13px] font-black px-3 py-1 rounded uppercase tracking-tighter">Noviembre 2020 - Noviembre 2021</div>
+<div class="w-full h-full bg-center bg-cover transform group-hover:scale-110 transition-transform duration-500" style='background-image: url("/src/tlaltelulco.png");'></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Servicios de Albañileria y Cimentación para 
+la Construcción del Centro de Desarrollo 
+Comunitario de la Magdalena Tlaltelulco, 
+Tlaxcala.</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Contrato YIG-TLA-CTR-19/2020</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="flex items-center gap-1 text-xs font-bold text-slate-400 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span> Tlaltelulco, Tlaxcala
+                            </span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                                Ver detalles <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-background-dark text-[13px] font-black px-3 py-1 rounded uppercase tracking-tighter">Noviembre 2021 - Noviembre 2022</div>
+<div class="w-full h-full bg-center bg-cover transform group-hover:scale-110 transition-transform duration-500" style='background-image: url("src/p2.png");'></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Servicios de Albañileria y Cimentación para la 
+Construcción del Centro de Desarrollo Social 
+Amador Carrasco, Texcoac Chiautempan, Tlaxcala.</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Contrato YIG-TLA-CTR-25/2021.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="flex items-center gap-1 text-xs font-bold text-slate-400 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span> Texcoac Chiautempan, Tlaxcala
+                            </span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                                Ver detalles <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-background-dark text-[13px] font-black px-3 py-1 rounded uppercase tracking-tighter">Octubre 2022 - Mayo 2023</div>
+<div class="w-full h-full bg-center bg-cover transform group-hover:scale-110 transition-transform duration-500" style='background-image: url("src/p3.png");'></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Trabajos de Rehabilitación y 
+Mantenimiento de Modelos de Bienestar.</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Contrato DMX/031/20022-31 </p>
+<ul style="list-style-type: disc; padding-left: 2%;" class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Direcciones Territoriales
+        <li>Aculco</li>
+        <li>Reforma</li>
+        <li>Atlalilco</li>
+        <li>Axomulco</li>
+        <li>Los Culhuacanes</li>
+</ul>
+<div class="flex items-center justify-between mt-auto">
+<span class="flex items-center gap-1 text-xs font-bold text-slate-400 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span> Alcaldía Iztapalapa
+                            </span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                                Ver detalles <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-background-dark text-[13px] font-black px-3 py-1 rounded uppercase tracking-tighter">Octubre 2022 - Mayo 2023</div>
+<div class="w-full h-full bg-center bg-cover transform group-hover:scale-110 transition-transform duration-500" style='background-image: url("src/p4.png");'></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Trabajos de Rehabilitación y Mantenimiento de Modelos de Bienestar.</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Contrato DMX/031/20022-31</p>
+<ul style="list-style-type: disc; padding-left: 2%;" class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Direcciones Territoriales
+        <li>Aculco</li>
+        <li>Reforma</li>
+        <li>Atlalilco</li>
+        <li>Axomulco</li>
+        <li>Los Culhuacanes</li>
+</ul>
+<div class="flex items-center justify-between mt-auto">
+<span class="flex items-center gap-1 text-xs font-bold text-slate-400 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span> Alcaldía Iztapalapa
+                            </span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                                Ver detalles <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project Card 5 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-800">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-20 bg-primary/90 text-background-dark text-[13px] font-black px-3 py-1 rounded uppercase tracking-tighter">18 Junio 2024 - 31 Agosto 2024</div>
+<div class="w-full h-full bg-center bg-cover transform group-hover:scale-110 transition-transform duration-500" style='background-image: url("src/p5.png");'></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">MANTENIMIENTO A LOS
+CAMPAMENTOS FORESTALES DE LA CONAFOR EN LA CDMX</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">Contrato OSV/G13/2024 <br> 75 Días hábiles <br> Monto total: $855,564.16</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="flex items-center gap-1 text-xs font-bold text-slate-400 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span> CDMX
+                            </span>
+<a class="text-primary font-bold text-sm flex items-center gap-1 group/link" href="#">
+                                Ver detalles <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- CTA Section -->
+<section class="w-full bg-slate-900 py-20 px-4 md:px-10">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+<div class="text-center lg:text-left">
+<h2 class="text-white text-3xl md:text-5xl font-black mb-4">¿Tienes un proyecto en mente?</h2>
+<p class="text-slate-400 text-lg max-w-xl">Nuestro equipo de expertos está listo para transformar tus ideas en realidades estructurales sólidas y sustentables.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="px-8 py-4 bg-primary text-background-dark font-black rounded-lg hover:scale-105 transition-transform">Contáctanos hoy</button>
+<button class="px-8 py-4 border border-slate-700 text-white font-black rounded-lg hover:bg-slate-800 transition-colors">Ver servicios</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-700 text-slate-400 py-16 px-6 md:px-20 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-4 text-white">
+<a href="index.html"><img src="src/DAIOSFS.png" alt=""  class="w-56 lg:w-64"></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Servicios</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Ingeniería Civil y Arquitectura</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustentabilidad Ambiental</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Licitación Pública y Privada</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Servicios, Trámites y Gestión</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Litigio y representación Legal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Compañía</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nuestros Proyectos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Soluciones</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Modelo Operativo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Paquetes</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contacto</h4>
+<div class="space-y-4 text-sm">
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                                Melchor Ocampo 1, Emiliano Zapata, Naucalpan de Juárez, Estado de México, C.P. 53426
+                            </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+                                daiosfivesolutions@gmail.com
+                            </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">phone</span>
+                                56 5799 0587 || 55 3078 5921
+                            </p>
+<div class="pt-4 flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-center items-center gap-4 text-xs">
+<p>© 2026 DAIOS | Five Solutions. Todos los derechos reservados.</p>
+<div class="flex gap-6"></div>
+</div>
+</footer>
+</div>
+</body></html>
