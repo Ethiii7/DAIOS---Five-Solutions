@@ -38,8 +38,8 @@
 <div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
 <nav class="hidden lg:flex items-center gap-8">
 <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html">Inicio</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Servicios</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html#servicios">Servicios</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
 <a class="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
 </nav>
 <!-- Botón menú móvil -->
@@ -60,10 +60,10 @@
         <a href="index.html" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
             Inicio
         </a>
-        <a href="#" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+        <a href="index.html#servicios" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
             Servicios
         </a>
-        <a href="#" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
+        <a href="nosotros.html" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
             Nosotros
         </a>
         <a href="#Contacto" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-primary">
@@ -80,7 +80,7 @@
         </script>
 <main class="flex-1 w-full max-w-7xl mx-auto px-4 md:px-10 py-12">
 <!-- Hero Section for Projects -->
-<section class="flex flex-col py-20 md:py-30 md:flex-row justify-between items-end gap-6 mb-12">
+<section class="flex flex-col pt-20 md:pt-30 md:flex-row justify-between items-end gap-6 mb-12">
 <div class="max-w-2xl">
 <nav class="flex items-center gap-2 text-primary text-sm font-bold mb-4 uppercase tracking-widest">
 <span>Proyectos Ejecutados</span>
@@ -223,13 +223,13 @@ Mantenimiento de Modelos de Bienestar.</h3>
 <p class="text-slate-400 text-lg max-w-xl">Nuestro equipo de expertos está listo para transformar tus ideas en realidades estructurales sólidas y sustentables.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-<button class="px-8 py-4 bg-primary text-background-dark font-black rounded-lg hover:scale-105 transition-transform">Contáctanos hoy</button>
-<button class="px-8 py-4 border border-slate-700 text-white font-black rounded-lg hover:bg-slate-800 transition-colors">Ver servicios</button>
+<button onclick="window.location.href='mailto:daiosfivesolutions@gmail.com?subject=Consulta&body=Agendar%20Consultoría.'" class="px-8 py-4 bg-primary text-background-dark font-black rounded-lg hover:scale-105 transition-transform">Contáctanos hoy</button>
+<button onclick="window.location.href='index.html#servicios'"class="px-8 py-4 border border-slate-700 text-white font-black rounded-lg hover:bg-slate-800 transition-colors">Ver servicios</button>
 </div>
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-slate-700 text-slate-400 py-16 px-6 md:px-20 border-t border-slate-800">
+<footer class="bg-slate-700 text-slate-400 py-16 px-6 md:px-20 border-t border-slate-800" id="contacto">
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 <div class="space-y-6">
 <div class="flex items-center gap-4 text-white">
@@ -247,13 +247,10 @@ Mantenimiento de Modelos de Bienestar.</h3>
 </ul>
 </div>
 <div>
-<h4 class="text-white font-bold mb-6">Compañía</h4>
+<h4 class="text-white font-bold mb-6">DAIOS | Five Solutions</h4>
 <ul class="space-y-4 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Nuestros Proyectos</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Soluciones</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Modelo Operativo</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Paquetes</a></li>
+<li><a class="hover:text-primary transition-colors" href="nosotros.html">Sobre Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="proyectos.html">Nuestros Proyectos</a></li>
 </ul>
 </div>
 <div>
