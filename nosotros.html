@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" href="src/DAIOS.png" type="image/x-icon">
+<title>DAIOS | Five Solutions</title>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3f8ccb",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Header/Navigation -->
+<header class=" fixed top-0 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-white dark:bg-background-dark w-full z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<a href="index.html"><img src="src/DAIOS.png" alt=""  class="w-40 lg:w-64"></a>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#servicios">Servicios</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="proyectos.html">Proyectos</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#sustentabilidad">Sustentabilidad</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="nosotros.html">Nosotros</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</nav>
+<!-- Botón menú móvil -->
+                <button id="menu-btn"
+                class="text-primary md:hidden flex items-center justify-center rounded-lg p-2 hover:bg-gray-200 dark:hover:bg-[#1f2937] transition">
+                <span class="material-symbols-outlined text-[28px]">
+                    menu
+                </span>
+                </button>
+</div>
+</header>
+<!-- Menú móvil -->
+        <div id="mobile-menu"
+        class="fixed top-20 w-40 rounded-lg right-0 bg-slate-200 text-primary
+                border-b border-primary
+                hidden flex flex-col gap-4 px-6 py-6 md:hidden z-40">
+
+        <a href="#servicios" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-slate-600">
+            Servicios
+        </a>
+        <a href="proyectos.html" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-slate-600">
+            Proyectos
+        </a>
+        <a href="#sustentabilidad" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-slate-600">
+            Sustentabilidad
+        </a>
+        <a href="#legal" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-slate-600">
+            Litigación
+        </a>
+        <a href="#contacto" onclick="mobileMenu.classList.add('hidden')" class="text-sm font-medium hover:text-slate-600">
+            Contacto
+        </a>
+        </div>
+        <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+        </script>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative h-[500px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Oficina corporativa moderna con ventanales grandes" style="background-image: linear-gradient(rgba(16, 24, 34, 0.7) 0%, rgba(16, 22, 34, 0.8) 100%), url('src/bgsn.png');"></div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="text-white text-5xl md:text-6xl font-black mb-6 tracking-tight">Sobre Nosotros</h1>
+<p class="text-white/90 text-lg md:text-xl font-normal max-w-2xl mx-auto leading-relaxed">
+                        "Donde otros solo ofrecen servicios, nosotros resolvemos integrando obra, cumplimiento y suministro en un solo frente.”
+                    </p>
+</div>
+</section>
+<!-- Misión y Visión -->
+<section class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="p-8 rounded-xl bg-white dark:bg-slate-800/50 border border-primary/10 shadow-sm">
+<div class="w-12 h-12 bg-primary/20 text-primary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">¿Quiénes somos?</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Somos un integrador de soluciones técnicas, operativas y normativas que unifica obra, cumplimiento, suministro 
+                            y servicios especializados en un solo frente. <br>Acompañamos a nuestros clientes desde la planeación 
+                            hasta la ejecución, garantizando operación continua, cumplimiento total y resultados medibles.
+                        </p>
+</div>
+<div class="p-8 rounded-xl bg-white dark:bg-slate-800/50 border border-primary/10 shadow-sm">
+<div class="w-12 h-12 bg-primary/20 text-primary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">target</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Nuestro enfoque</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Transformamos necesidades operativas en soluciones 
+                            claras, ejecutables y alineadas a normativas, asegurando 
+                            que cada proyecto avance sin interrupciones y con 
+                            trazabilidad total.
+                        </p>
+</div>
+</div>
+</section>
+
+<section class="py-12 bg-primary/5">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-3xl font-black text-center mb-6">Nuestro Alcance</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-8 text-justify">
+    Atendemos proyectos que requieren precisión 
+    técnica, cumplimiento normativo y ejecución 
+    operativa. Nuestra capacidad abarca desde la obra física 
+    hasta la documentación blindada, pasando 
+    por suministro, inspección y respuesta inmediata.</p>
+<div class="space-y-0">
+<!-- Item 1 -->
+<div class="flex gap-6 pb-12 relative">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-background-dark text-xl">handyman</span>
+</div>
+</div>
+<div class="pt-1">
+<span class="text-primary font-bold text-lg">Obra civil y mantenimiento técnico</span>
+<p class="text-slate-600 mt-">
+    Ejecución directa, supervisión, y entrega 
+    conforme a especificaciones
+</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 pb-12 relative">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-background-dark text-xl">gavel</span>
+</div>
+</div>
+<div class="pt-1">
+<span class="text-primary font-bold text-lg">Cumplimiento normativo y ambiental</span>
+<p class="text-slate-600 mt-">
+    Tramitología, inspecciones, dictámenes, y 
+    blindaje documental
+</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-6 pb-12 relative">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-background-dark text-xl">trolley</span>
+</div>
+</div>
+<div class="pt-1">
+<span class="text-primary font-bold text-lg">Suministro y comercialización</span>
+<p class="text-slate-600 mt-">
+    Herramientas, equipos, señalética, 
+    mobiliario, químicos, pinturas 
+    y recubrimientos, productos de limpieza y 
+    consumibles operativos.
+</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex gap-6 pb-12 relative">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-background-dark text-xl">handshake</span>
+</div>
+</div>
+<div class="pt-1">
+<span class="text-primary font-bold text-lg">Servicios operativos especializados</span>
+<p class="text-slate-600 mt-">
+    Fumigación, limpieza, capacitación, soporte 
+    técnico y logístico, transporte de personal.
+</p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex gap-6 pb-12 relative">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-background-dark text-xl">design_services</span>
+</div>
+</div>
+<div class="pt-1">
+<span class="text-primary font-bold text-lg">Gestión integral de proyectos</span>
+<p class="text-slate-600 mt-">
+    Planeación, ejecución, seguimiento y cierre 
+    conforme a ley.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-black mb-4">Nuestros Servicios</h2>
+<p class="text-slate-600 dark:text-slate-400">Los principios que rigen cada una de nuestras acciones.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="text-center group p-6 hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-all shadow-hover">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">colors</span>
+</div>
+<h4 class="text-xl font-bold mb-3">SUMINISTRO DE PINTURAS Y RECUBRIMIENTOS</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+    Integramos una línea completa de pinturas y 
+    recubrimientos de calidad profesional, 
+    ideales para proyectos de obra civil, 
+    mantenimiento técnico e infraestructura. <br>
+    Trabajamos con Alvamex, marca mexicana 
+    con más de 30 años de experiencia en el 
+    sector, lo que nos permite ofrecer productos 
+    confiables, con excelente rendimiento y 
+    disponibilidad inmediata
+</p>
+</div>
+<div class="text-center group p-6 hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-all shadow-hover">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">clean_hands</span>
+</div>
+<h4 class="text-xl font-bold mb-3">SUMINISTRO DE PRODUCTOS DE LIMPIEZA Y CONSUMIBLES OPERATIVOS</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+    Contamos con un portafolio completo de 
+    productos de limpieza y consumibles 
+    esenciales para mantener instalaciones 
+    seguras, limpias y operativas. <br>
+    Todos los productos cuentan con 
+    trazabilidad, control de inventario y entrega 
+    con evidencia, alineados a protocolos de 
+    seguridad e higiene.
+</p>
+</div>
+<div class="text-center group p-6 hover:bg-white dark:hover:bg-slate-800 rounded-xl transition-all shadow-hover">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">airport_shuttle</span>
+</div>
+<h4 class="text-xl font-bold mb-3">TRANSPORTE DE PERSONAL</h4>
+<p class="text-slate-500 text-sm leading-relaxed">
+    Integramos soluciones de transporte de 
+    personal diseñadas para garantizar puntualidad, 
+    seguridad y continuidad operativa en plantas, obras, centros logísticos 
+    y corporativos. 
+    Contamos con unidades monitoreadas, 
+    operadores certificados y rutas optimizadas 
+    conforme a requerimientos técnicos y 
+    normativos.
+</p>
+</div>
+</div>
+</section>
+<section class="py-20 bg-slate-900 text-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<h2 class="text-3xl font-black mb-4">Proyectos Ejecutados</h2>
+<p class="text-slate-400 max-w-xl">Contamos con equipos especializados liderados por expertos en sus respectivas áreas para garantizar resultados integrales.</p>
+</div>
+<button onclick="location.href='proyectos.html'" class="border border-primary text-primary px-6 py-2 rounded hover:bg-primary hover:text-background-dark transition-colors font-bold">
+                            Conocer más
+                        </button>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="relative group h-80 overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('src/tlaltelulco.png');"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h5 class="text-xl font-bold">Servicios de Albañileria y Cimentación para la Construcción del Centro de Desarrollo Comunitario de la Magdalena Tlaltelulco, Tlaxcala.</h5>
+</div>
+</div>
+<div class="relative group h-80 overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('src/p3.png');"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h5 class="text-xl font-bold">Trabajos de Rehabilitación y Mantenimiento de Modelos de Bienestar.</h5>
+</div>
+</div>
+<div class="relative group h-80 overflow-hidden rounded-xl">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('src/p5.png');"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h5 class="text-xl font-bold">Mantenimiento a los campamentos forestales de la CONAFOR en la CDMX</h5>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-700 text-slate-400 py-16 px-6 md:px-20 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-4 text-white">
+<a href="index.html"><img src="src/DAIOSFS.png" alt=""  class="w-56 lg:w-64"></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Servicios</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Ingeniería Civil y Arquitectura</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustentabilidad Ambiental</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Licitación Pública y Privada</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Servicios, Trámites y Gestión</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Litigio y representación Legal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Compañía</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nuestros Proyectos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Soluciones</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Modelo Operativo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Paquetes</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Contacto</h4>
+<div class="space-y-4 text-sm">
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                                Melchor Ocampo 1, Emiliano Zapata, Naucalpan de Juárez, Estado de México, C.P. 53426
+                            </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+                                daiosfivesolutions@gmail.com
+                            </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">phone</span>
+                                56 5799 0587 || 55 3078 5921
+                            </p>
+<div class="pt-4 flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-background-dark transition-all" href="#">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-center items-center gap-4 text-xs">
+<p>© 2026 DAIOS | Five Solutions. Todos los derechos reservados.</p>
+<div class="flex gap-6"></div>
+</div>
+</footer>
+</div>
+</body></html>
